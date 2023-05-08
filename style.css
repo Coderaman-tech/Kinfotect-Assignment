@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.parent-container{
+    display: grid;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 1fr;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.cell{
+    box-sizing: border-box;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.sub-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 1fr;
+}
+
+.sub-cell{
+    box-sizing: border-box;
+    border: 1px solid black;
+    height: 50px;
+
+}
+
+/* Color the cell and their subcell*/
+
+.cell1 {
+    background-color: #d9ee1a;
+  }
+  
+  .cell2 {
+    background-color: #87e6e9;
+  }
+  
+  .cell3 {
+    background-color: #ccccff;
+  }
+  
+  .cell4 {
+    background-color: #eb72d7;
+  }
+  
+  .sub-cell:nth-child(1) {
+    background-color: #ff9999;
+  }
+  
+  .sub-cell:nth-child(2) {
+    background-color: #99ff99;
+  }
+  
+  .sub-cell:nth-child(3) {
+    background-color: #9999ff;
+  }
+  
+  .sub-cell:nth-child(4) {
+    background-color: #ffff99;
+  }
+
+  /* Media queries for resizing the grid */
+
+  @media (max-width:720px) {
+    /* if window size is less than 720px */
+    .container{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+  }
+
+  @media (max-width: 360px) {
+    /* if window size is less than 360px */
+    .container{
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+    }
+  }
